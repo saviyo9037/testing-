@@ -30,13 +30,84 @@ body{background:radial-gradient(ellipse at 80% 0%,#263629 0,transparent 34%),var
 .contact{border-radius:4px;padding:78px;box-shadow:0 22px 60px #0004}.contact .btn{border-radius:2px}.footer{padding:35px 0;border-top:1px solid #ffffff12;margin-top:50px}
 @media(max-width:760px){.hero{padding:65px 0 55px;gap:30px}.hero h1{font-size:48px;letter-spacing:-2.8px}.hero-visual{height:330px}.section{padding:75px 0}.section-head{margin-bottom:25px}.project-art{height:220px}.about{padding:30px}.contact{padding:35px 25px}.stat strong{font-size:28px}}
 
+
+/* Archeon-inspired light architecture layout */
+:root{--bg:#f5f3ed;--panel:#fffefa;--panel2:#eeeae1;--ink:#252923;--muted:#70766e;--line:#d9d6cc;--accent:#a4a17a}
+body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif}
+.wrap{width:min(1240px,calc(100% - 56px))}
+.nav{height:86px;border-bottom:1px solid var(--line)}
+.brand{color:#252923}.brand span{color:#8b8967}
+.navlinks{color:#42483f}.navcta,.btn{background:#252923;color:#fff;border-radius:0;letter-spacing:1px;font-size:10px}
+.navcta:hover,.btn:hover{background:#77785b;color:#fff}
+.hero{width:100%;max-width:none;padding:0;display:block;position:relative;min-height:610px;background:linear-gradient(90deg,#f5f3ed 0%,#f5f3ed 37%,#f5f3ed00 65%),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90') center/cover}
+.hero>div:first-child{width:min(1240px,calc(100% - 56px));margin:auto;padding:125px 0 115px;position:relative;z-index:1}
+.hero h1{font:500 clamp(48px,6vw,78px)/.98 Georgia,serif;letter-spacing:-3px;color:#252923}
+.hero h1 em{color:#77785b;font-style:normal}
+.hero p{color:#555d54;max-width:440px;font-size:14px}
+.eyebrow{color:#77785b;font-size:10px;letter-spacing:2.5px}
+.hero-visual{display:none}.actions{margin-top:28px}
+.stats{border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:25px 0}
+.stat strong{color:#77785b;font:500 34px Georgia}.stat span{color:#777}
+.section{padding:92px 0}
+.section h2,.about h2,.contact h2{font:500 clamp(34px,4vw,48px)/1.04 Georgia,serif;letter-spacing:-1.5px;color:#292d27}
+.section-head p,.project-info p,.about p{color:#687067}
+.filter{color:#555d54;border-color:#d4d0c5;border-radius:0}.filter.active,.filter:hover{background:#252923;color:white;border-color:#252923}
+.projects{grid-template-columns:repeat(3,1fr);gap:22px}
+.project{background:#fffefa;border:0;border-radius:0;box-shadow:none}
+.project:hover{transform:translateY(-4px);border-color:transparent}
+.project-art{height:230px;border-radius:0}
+.project-info{padding:18px 2px 20px}.project-info h3{font:500 21px Georgia;color:#282d27}.project-info small{color:#77785b}.project-info p{font-size:12px;min-height:38px}
+.project-meta{border-color:#dedbd2;color:#62685f}
+.status{background:#252923;color:#fff;border:0;border-radius:0}
+.about{background:#ebe8df;border:0;border-radius:0;padding:60px;grid-template-columns:1fr 1fr}
+.checks span{background:#f7f5ef;border:0;border-radius:0;color:#42483f}
+.contact{background:#dcd9cd;color:#292d27;border-radius:0;box-shadow:none;padding:62px}
+.contact h2{color:#292d27}.contact p{color:#596057}.contact .btn{background:#252923;color:white}
+.footer{color:#72776f;border-color:#d8d4c9}
+.feature-strip{display:grid;grid-template-columns:1fr 1fr;background:#eae7de;min-height:390px}
+.feature-copy{padding:65px max(30px,calc((100vw - 1240px)/2));padding-right:45px;display:flex;flex-direction:column;justify-content:center}
+.feature-copy h2{font:500 clamp(34px,4vw,48px)/1.02 Georgia,serif;margin:12px 0;color:#292d27}
+.feature-copy p{font-size:13px;line-height:1.8;color:#646b62;max-width:440px}
+.feature-image{min-height:390px;background:center/cover url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1300&q=85')}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.service{padding:28px 24px;border-right:1px solid var(--line)}.service:last-child{border:0}
+.service .symbol{font:32px Georgia;color:#77785b}.service h3{font-size:11px;letter-spacing:1.3px;text-transform:uppercase;margin:14px 0 8px}.service p{font-size:12px;color:#72786f;line-height:1.6}
+.process{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:30px}
+.step{padding:22px 18px 10px 0;border-right:1px solid var(--line);margin-right:20px}.step:last-child{border:0}
+.step b{font:32px Georgia;color:#a59b84}.step h3{font-size:10px;letter-spacing:1.5px;margin:8px 0}.step p{font-size:12px;color:#72786f;line-height:1.6}
+.founder{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;background:#ebe8df;padding:52px;margin-top:40px}
+.founder-photo{min-height:360px;background:center/cover url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=85')}
+.founder h2{font:500 clamp(34px,4vw,48px)/1.05 Georgia,serif;margin:12px 0;color:#292d27}
+.founder p{color:#646b62;line-height:1.8;font-size:13px}
+.video-frame{aspect-ratio:16/9;background:#242a24;display:flex;align-items:center;justify-content:center;color:#f7f5ef;position:relative;overflow:hidden}
+.video-frame:before{content:'';position:absolute;inset:0;background:linear-gradient(#18201966,#182019aa),url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80') center/cover;opacity:.75}
+.video-placeholder{position:relative;text-align:center;padding:20px}.play{width:58px;height:58px;border:1px solid #fff;border-radius:50%;display:grid;place-items:center;margin:0 auto 16px;font-size:20px}
+.video-placeholder small{display:block;letter-spacing:1.8px;font-size:9px}.video-note{font-size:11px;color:#74796f;margin-top:12px}
+.interior-band{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;background:#ebe8df;margin-top:35px}
+.interior-band .feature-image{min-height:340px}.interior-band .feature-copy{padding:45px}
+@media(max-width:760px){.wrap{width:calc(100% - 36px)}.nav{height:72px}.hero{min-height:0;background:linear-gradient(90deg,#f5f3eddd,#f5f3ed55),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85') center/cover}.hero>div:first-child{width:calc(100% - 36px);padding:95px 0 85px}.hero h1{font-size:48px;letter-spacing:-2px}.stats{gap:10px}.stat strong{font-size:26px}.section{padding:65px 0}.projects{grid-template-columns:1fr}.services-grid{grid-template-columns:repeat(2,1fr)}.service:nth-child(2){border-right:0}.service:nth-child(-n+2){border-bottom:1px solid var(--line)}.feature-strip,.interior-band,.founder{grid-template-columns:1fr}.feature-copy{padding:38px 22px}.feature-image{min-height:260px}.process{grid-template-columns:repeat(2,1fr);row-gap:15px}.step:nth-child(2){border-right:0}.founder{padding:25px;gap:25px}.founder-photo{min-height:260px}.about{padding:30px}.contact{padding:35px 25px}}
+
 </style>
 </head>
 <body>
-<header class="wrap nav"><a class="brand" href="#">BUILD<span>CRAFT.</span></a><nav class="navlinks"><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a></nav><a class="navcta" href="#contact">LET'S TALK ↗</a><span class="menu">●</span></header>
+<header class="wrap nav"><a class="brand" href="#">BUILD<span>CRAFT.</span></a><nav class="navlinks"><a href="#services">Services</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#founder">Founder</a><a href="#contact">Contact</a></nav><a class="navcta" href="#contact">LET'S TALK ↗</a><span class="menu">●</span></header>
 <main>
 <section class="wrap hero"><div><div class="eyebrow">Construction · Design · Excellence</div><h1>Building spaces.<br><em>Creating futures.</em></h1><p>From the first foundation to the final finish, we bring ideas to life with thoughtful planning, quality craftsmanship and a commitment to doing things right.</p><div class="actions"><a class="btn" href="#projects">EXPLORE OUR WORK ↗</a><a class="btn secondary" href="#contact">GET IN TOUCH</a></div></div><div class="hero-visual"><div class="sun"></div><div class="building"></div><div class="visual-tag">CRAFTED WITH PURPOSE · BUILT TO LAST</div></div></section>
 <section class="wrap stats"><div class="stat"><strong>12+</strong><span>Projects delivered</span></div><div class="stat"><strong>08</strong><span>Years of experience</span></div><div class="stat"><strong>100%</strong><span>Commitment to quality</span></div></section>
+
+<section class="section wrap" id="services"><div class="section-head"><div><div class="eyebrow">What we do</div><h2>Residential design<br>and construction.</h2></div><p>From early concepts to the final handover, thoughtful service and careful execution at every stage.</p></div><div class="services-grid">
+<div class="service"><div class="symbol">⌂</div><h3>Architectural Design</h3><p>Ideas that become distinctive, practical spaces.</p></div>
+<div class="service"><div class="symbol">⌑</div><h3>Residential Construction</h3><p>Quality and care in every detail of the build.</p></div>
+<div class="service"><div class="symbol">▱</div><h3>Interior Design</h3><p>Spaces that inspire comfort and everyday living.</p></div>
+<div class="service"><div class="symbol">✳</div><h3>Project Management</h3><p>From concept to completion with clear coordination.</p></div>
+</div></section>
+<section class="feature-strip"><div class="feature-copy"><div class="eyebrow">Spaces that inspire</div><h2>More than houses.<br>A better way of living.</h2><p>Thoughtful interiors, natural materials and functional design that elevate everyday life.</p><a class="btn" style="width:max-content;margin-top:12px" href="#projects">EXPLORE OUR WORK ↗</a></div><div class="feature-image"></div></section>
+<section class="section wrap" id="process"><div class="eyebrow">Our approach</div><h2>Simple. Clear. Together.</h2><div class="process">
+<div class="step"><b>01</b><h3>DISCOVERY</h3><p>We listen to your ideas, needs and goals.</p></div><div class="step"><b>02</b><h3>DESIGN</h3><p>We develop a tailored design solution.</p></div><div class="step"><b>03</b><h3>BUILD</h3><p>We bring your project to life with care.</p></div><div class="step"><b>04</b><h3>DELIVERY</h3><p>A home ready for its next story.</p></div>
+</div></section>
+<section class="section wrap" id="interiors"><div class="interior-band"><div class="feature-image"></div><div class="feature-copy"><div class="eyebrow">Our philosophy</div><h2>Spaces made for<br>real life.</h2><p>Beautiful spaces should also feel effortless to live in. We bring together materials, light and practical details to create places that feel like home.</p></div></div></section>
+<section class="section wrap" id="founder"><div class="eyebrow">Meet the founder</div><div class="founder"><div class="founder-photo"></div><div><div class="eyebrow">The person behind the work</div><h2>A personal approach.<br>A lasting commitment.</h2><p>Get to know the founder, the values behind the company and the care that goes into every project. This section can feature the founder's introduction, experience and vision.</p><div class="video-frame"><div class="video-placeholder"><div class="play">▶</div><small>FOUNDER INTRODUCTION VIDEO</small><p style="font-size:11px;color:#e7e7dc">Founder video will be added here</p></div></div><div class="video-note">Share the founder's YouTube link or upload the video to replace this preview.</div></div></div></section>
+
 <section class="section wrap" id="projects"><div class="section-head"><div><div class="eyebrow">Our portfolio</div><h2>Work that speaks<br>for itself.</h2></div><p>A look at the spaces we've helped shape. Explore completed work, projects in progress and what's coming next.</p></div><div class="filters"><button class="filter active" data-filter="all">All projects</button><button class="filter" data-filter="completed">Completed</button><button class="filter" data-filter="ongoing">Ongoing</button><button class="filter" data-filter="coming">Coming soon</button></div><div class="projects" id="projectGrid">
 <article class="project" data-status="completed"><div class="project-art"><span class="status">Completed</span></div><div class="project-info"><small>Residential · 2025</small><h3>Modern Family Residence</h3><p>A contemporary home designed around light, comfort and everyday living.</p><div class="project-meta"><span>Kerala, India</span><span>View project ↗</span></div></div></article>
 <article class="project" data-status="ongoing"><div class="project-art art-2"><span class="status">Ongoing</span></div><div class="project-info"><small>Commercial · 2026</small><h3>Commercial Space</h3><p>A functional commercial development with a focus on clean lines and durability.</p><div class="project-meta"><span>Kerala, India</span><span>In progress</span></div></div></article>
